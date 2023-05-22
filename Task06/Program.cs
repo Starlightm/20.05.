@@ -7,4 +7,3 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 if (num >= -9 && num <= 9)
-{
