@@ -3,14 +3,16 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-
-Console.Write("Введите число: ");
+Console.WriteLine("Введите целое  число: ");
+int num = 1;
 int number = Convert.ToInt32(Console.ReadLine());
-int i = 1;
 
- Console.WriteLine("Чётные числа от 1 до number");
- while (i <= number)
+while (num <= number)
 {
-     if(i % 2 == 0)
-   i++;
+ if (num % 2 == 0)
+ {
+    Console.Write($"{num}, ");
+ }
+ num++;
 }
+
