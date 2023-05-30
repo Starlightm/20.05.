@@ -15,7 +15,7 @@ Console.WriteLine($"Случайное число из отрезка 10 - 99 ->
 // else
 //     Console.WriteLine($"Наибольшая цифра числа -> {secondDigit}");
 
-// // второй метод
+// // второй метод,  если первое больше второго(условие выполняется)- после знака вапроса выводится результат, если не выполняется после знака(:) второй результат
 
 // int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
 // Console.WriteLine($"Наибольшая цифра числа -> {maxDigit}");
