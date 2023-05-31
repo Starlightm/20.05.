@@ -3,3 +3,17 @@
 // 6 -> да
 // 7 -> да
 // 1 -> нет
+
+// два Bool метода:один проверяет диапазон.второй отвечает на вопрос
+
+Console.Write("Введите день недели: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+    if (number > 0 && number <= 7)
+    {
+        Console.WriteLine((number >= 6)?" Да, выходной":"Нет, будни!");
+    }
+    else 
+       Console.WriteLine("Это не день недели");
+
+
