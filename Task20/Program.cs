@@ -36,3 +36,26 @@ double result = DistanceFromCoordinates(x1, y1, x2, y2);
 //  и далее округление :
 double resultRound = Math.Round(result, 2, MidpointRounding.ToZero); 
 Console.WriteLine(resultRound);
+
+// 2 способ
+
+// int EnterCoordinate(string message)
+// {
+//     System.Console.WriteLine(message);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// double Distance(int x1, int y1, int x2, int y2)
+// {
+//     return Math.Sqrt(Math.Pow(x2 - x1,2)+(Math.Pow(y2 - y1,2)));
+// }
+
+// int xOfA = EnterCoordinate("Enter x for A");
+// int yOfA = EnterCoordinate("Enter y for A");
+// int xOfB = EnterCoordinate("Enter x for B");
+// int yOfB = EnterCoordinate("Enter y for B");
+
+// double result = Distance(xOfA, yOfA, xOfB, yOfB);
+
+// System.Console.WriteLine("Distance between dots: ");
+// System.Console.WriteLine(Math.Round(result, 2, MidpointRounding.ToZero)); 
