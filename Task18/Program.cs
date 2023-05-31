@@ -8,9 +8,9 @@ string quarter = Console.ReadLine();
 string range = Range(quarter);
 string result = range == null
 ? "Неверно введен номер четверти"
-: $"Диапазон возможных кооординат для указанной четверти {range}";
-
+: $"Диапазон возможных кооординат для указанной четверти -> {range}";
 Console.WriteLine(result);
+
 
 string Range(string q)
 {
