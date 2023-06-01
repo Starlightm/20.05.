@@ -9,15 +9,14 @@
 // double dRound = Math.Round(num, 2, MidpointRounding.ToZero);
 // System.Console.WriteLine(dRound);
 
-int EnterCoordinate(string message)
+int Square(int num)
 {
-    System.Console.WriteLine(message);
-    return Convert.ToInt32(Console.ReadLine());
+    return num * num;
 }
 
 double DistanceFromCoordinates(int ax, int ay, int az, int bx, int by, int bz)
 {
-return Math.Sqrt(Square(xb - xa)) + (Square(yb - ya)) + (Square(zb - za));
+  return Math.Sqrt(Square(bx - ax)) + (Square(by - ay)) + (Square(bz - az));
 }
 
 
@@ -34,5 +33,5 @@ int y2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите координату z второй точки");
 int z2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"Расстояние между двумя точками: {result}");
-double result = Math.Round(DistanceBetween(ax, ay, az, bx, by, bz));
+double result = Math.Round(DistanceFromCoordinates(x1, y1, z1, x2, y2, z2));
+Console.WriteLine($"TРасстояние между двумя точками: {result}");
