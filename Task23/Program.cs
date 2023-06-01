@@ -7,3 +7,19 @@
 // 3 | 27
 // 4 | 64
 // 5 | 125
+
+Console.WriteLine("Введите натураольное число");
+int num = Convert.ToInt32(Console.ReadLine());
+
+
+CubeTable(num);
+
+void CubeTable(int n)
+{
+    int count = 1;
+    while (count <= n)
+    {
+        Console.WriteLine($"{count,3} -> {count * count* count ,4}");
+        count++;
+    }
+}
