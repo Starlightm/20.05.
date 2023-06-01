@@ -34,4 +34,4 @@ Console.WriteLine("Введите координату z второй точки
 int z2 = Convert.ToInt32(Console.ReadLine());
 
 double result = Math.Round(DistanceFromCoordinates(x1, y1, z1, x2, y2, z2));
-Console.WriteLine($"TРасстояние между двумя точками: {result}");
+Console.WriteLine($"Расстояние между двумя точками: {result}");
