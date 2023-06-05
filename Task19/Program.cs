@@ -33,5 +33,6 @@ if  (number < 10000 && number > 99999)
     }
 
 int num = int.Parse(Console.ReadLine()!);
-Palindrome(number);
+
+int Palindrome(number) = number;
  
