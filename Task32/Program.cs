@@ -1,4 +1,4 @@
-﻿// Задача 32: Напишите программу замена элементов
+﻿// Задача 32*: Напишите программу замена элементов
 // массива: положительные элементы замените на
 // соответствующие отрицательные, и наоборот.
 // [-4, -8, 8, 2] -> [4, 8, -8, -2]
@@ -17,7 +17,7 @@ int[] CreateFillArray(int size, int min, int max)
 }
 void PrintArray(int[] arr)
 {
-    int  lenght = arr.Length;
+    int lenght = arr.Length;
     Console.Write("[");
     for (int i = 0; i < lenght; i++)
     {
@@ -39,7 +39,7 @@ void ChangesSign(int[] arr)
 
 
 int[] array = CreateFillArray(10, -10, 10);
-
 PrintArray(array);
+
 ChangesSign(array);
 PrintArray(array);
