@@ -19,15 +19,17 @@ void PrintArray(int[] arr)
 {
     int  lenght = arr.Length;
     Console.Write("[");
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < lenght; i++)
     {
-        if (i < arr.Length - 1) Console.Write ($"{arr[i]}, ");
+        if (lenght - i > 1)
+         Console.Write ($"{arr[i]}, ");
         else Console.Write($"{arr[i]}");
     }
+     Console.WriteLine("]");
 }
 void ChangesSign(int[] arr)
 {
-    for (int i = 0; i < arr.Length - 1; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         // присваиваем каждому элементу цикла этот же элемент умноженный на минус 1
         arr[i] *= -1;
@@ -35,7 +37,9 @@ void ChangesSign(int[] arr)
 }
 
 
+
 int[] array = CreateFillArray(10, -10, 10);
+
 PrintArray(array);
 ChangesSign(array);
 PrintArray(array);
