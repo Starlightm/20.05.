@@ -13,8 +13,8 @@
 
 // int[] array = new int[8]; // 0 1 2 3 4 5 6 7
 // int size = array.Length; //8
-// array[0] = 5343;
-// array[7] = 67;
+// array[0] = 5343; выдаст false
+// array[7] = 67;false
 
 // for (int i = 0; i < array.Length; i++)
 // {
@@ -31,10 +31,12 @@ void FillArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
+        // new Random().Next(2) означает 
+        // диапазон max от 0 до max  не включая max цифру 2
         array[i] = new Random().Next(2);
     }
 }
-
+//  или лучше так
 // void FillArray(int[] array)
 // {
 // Random rnd = new Random();

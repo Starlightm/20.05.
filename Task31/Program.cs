@@ -9,8 +9,10 @@ int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
+    // arr.Length - это свойство показывает колво элементов в массиве
     for (int i = 0; i < arr.Length; i++)
     {
+        // max + 1 - означает что мы задаем свой массив.в данном случае от -9 до 9
         arr[i] = rnd.Next(min, max + 1);
     }
     return arr;
@@ -20,7 +22,7 @@ void PrintArray(int[] arr, string sep = ",")
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i < arr.Length - 1) Console.Write ($"{arr[i]}, ");
+        if (i < arr.Length - 1) Console.Write ($"{arr[i]}{sep} ");
         else Console.Write($"{arr[i]}");
     }
 
@@ -75,7 +77,7 @@ int[] sumPositiveNegativeElem = GetSumPositiveNegativeElem(array);
 Console.WriteLine($" Сумма положительных элементов = {sumPositiveNegativeElem[0]}");
 Console.WriteLine($" Сумма отрицательных элементов = {sumPositiveNegativeElem[1]}");
 
-// 2  метод
+// 2  метод вывод
 
 int sumPositiveElem = GetSumPositiveElem(array);
 int sumNegativeElem = GetSumNegativeElem(array);

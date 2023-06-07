@@ -6,10 +6,10 @@
 int[] CreateFillArray(int size, int min, int max)
 {
     int[] arr = new int[size];
-    Random rnd = new Random();
+    Random rand = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(min, max + 1);
+        arr[i] = rand.Next(min, max + 1);
     }
     return arr;
 }
@@ -30,9 +30,9 @@ void PrintArray(int[] arr)
 
 bool ContainsNumber(int[] arr, int num)
 {
-    for (int i = 0; i < arr.Lenght; i++)
+    for (int i = 0; i < arr.Length ; i++)
     {
-        if (arr[i] == num) return true;
+        if (arr[i] == num)return true;
     }
     return false;
 }

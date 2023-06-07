@@ -20,9 +20,9 @@ void PrintArray(int[] arr)
     for (int i = 0; i < lenght; i++)
     {
         if (lenght - i > 1)
-            Console.Write($"{arr[i]}, ");
+            Console.Write($"{arr[i]},");
         else
-            Console.Write($"{arr[i]}");
+            Console.Write($"{arr[i]}.");
     }
     Console.WriteLine("]");
 }
