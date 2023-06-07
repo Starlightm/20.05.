@@ -20,3 +20,4 @@ string Range(string q)
     if (q == "4") return "x > 0 ; y < 0";
     return null;
 }
+

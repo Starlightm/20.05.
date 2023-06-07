@@ -15,7 +15,7 @@
 
 double DistanceFromCoordinates(int ax, int ay, int bx, int by)
 {
-    double sumCathetus = (bx - ax) * (bx - ax) + (by - ay) * (by - ay);
+    double sumCathetus = (bx - ax) * (bx - ax) + (by - ay) * (by - ay); 
     // Далее вычисляем квадртный корень из суммы квадартов
     //  катетов/это и есть гипотенуза- искомое расстояние
     double d = Math.Sqrt(sumCathetus);
