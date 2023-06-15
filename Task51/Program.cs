@@ -33,36 +33,37 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int GetDiagonSum(int[,] matrix)
+// int GetDiagonSum(int[,] matrix)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (i == j)
+//             {
+//                 sum += matrix[i, j];
+//             }
+//         }
+//     }
+//     return sum;
+// }
+
+
+
+int GetDiagonSum(int[,] arr)
 {
+    // находит минимум между количеством строк и кол столбцов
+    int min = Math.Min(arr.GetLength(0), arr.GetLength(1));
     int sum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
+     for (int i = 0; i < min; i++)
+    // for (int i = 0; i < arr.GetLength(0) && i < arr.GetLength(1); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i == j)
-            {
-                sum += matrix[i, j];
-            }
-        }
+        sum += arr[i, i];
     }
     return sum;
 }
 
-
-
-// int GetDiagonSum(int[,] arr)
-// {
-//     int min = Math.Min(arr.GetLength(0), arr.GetLength(1));
-//     int sum = 0;
-//     // for (int i = 0; i < min; i++)
-//      for (int i = 0; i < arr.GetLength(0) && i < arr.GetLength(1); i++)
-//      {
-//         sum += arr[i, i];
-//     }
-// return sum;
-// }
-
-    int[,] array2d = CreateMatrixRndInt(4, 4, -100, 100);
-    PrintMatrix(array2d);
-    Console.WriteLine("Cумма диаганали: " + GetDiagonSum(array2d));
+int[,] array2d = CreateMatrixRndInt(4, 4, -100, 100);
+PrintMatrix(array2d);
+Console.WriteLine("Cумма диаганали: " + GetDiagonSum(array2d));
