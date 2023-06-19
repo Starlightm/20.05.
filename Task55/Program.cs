@@ -38,7 +38,7 @@ void SwapRowsColumns(int[,] arr)
 {
 for (int i = 0; i < arr.GetLength(0); i++)
 {
-for (int j = i; j < arr.GetLength(1); j++)
+for (int j = i + 1; j < arr.GetLength(1); j++)
 {
 int temp = arr[i, j];
 arr[i, j] = arr[j, i];
@@ -56,4 +56,11 @@ return matrix.GetLength(0) == matrix.GetLength(1);
 
 
 int[,] matr = CreateMatrixRndInt(4, 4, 0, 10);
-PrintM
+PrintMatrix(matr);
+Console.WriteLine();
+if (IsMatrixSquare(matr))
+{
+    SwapRowsColumns(matr);
+    PrintMatrix(matr);
+}
+
