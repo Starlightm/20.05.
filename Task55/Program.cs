@@ -33,7 +33,6 @@ Console.WriteLine();
 }
 
 
-
 void SwapRowsColumns(int[,] arr)
 {
 for (int i = 0; i < arr.GetLength(0); i++)
@@ -52,7 +51,6 @@ bool IsMatrixSquare(int[,] matrix)
 {
 return matrix.GetLength(0) == matrix.GetLength(1);
 }
-
 
 
 int[,] matr = CreateMatrixRndInt(4, 4, 0, 10);
