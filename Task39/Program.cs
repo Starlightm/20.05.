@@ -31,11 +31,11 @@ void ReversArray (int[] arr)
 {
     for (int i = 0; i < arr.Length / 2; i++)
     {
-        int  temp = arr[i];
-        arr[i] = arr[arr.Length - 1 - i];
-        arr[arr.Length - 1 - i] = temp;
+    //     int  temp = arr[i];
+    //     arr[i] = arr[arr.Length - 1 - i];
+    //     arr[arr.Length - 1 - i] = temp;
 
-        // Swap(arr, i, arr.Length - 1 - i);
+         Swap(arr, i, arr.Length - 1 - i);
     }
 }
 void Swap (int[] arr, int elemLeft, int elemRight)
