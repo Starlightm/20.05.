@@ -8,7 +8,7 @@
 // 15 18
 
 
-int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+int[,] CreateMatrix(int rows, int columns, int min, int max)
 {
     int[,] matrix = new int[rows, columns];
     Random rnd = new Random();
@@ -23,6 +23,7 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 }
 
 void PrintMatrix(int[,] matrix)
+
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -33,3 +34,38 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+
+int[,] MultiplicationMatrixes(int[,] matrixA, int[,] matrixB)
+{
+    int[,] result = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
+
+    for (int i = 0; i < result.GetLength(0); i++)
+    {
+        for (int j = 0; j < result.GetLength(1); j++)
+        {
+            for (int k = 0; k < result.GetLength(1); k++)
+            {
+                result[i, j] += matrixA[i, k] * matrixB[k, j];
+            }
+        }
+    }
+
+    return result;
+}
+
+bool MltpExist(int[,] matrix1, int[,] matrix2)
+{
+    return matrix1.GetLength(0) == matrix2.GetLength(1);
+}
+
+int[,] matrixA = CreateMatrix(2, 2, 2, 1);
+PrintMatrix(matrixA);
+int[,] matrixB = CreateMatrix(2, 2, 2, 1);
+PrintMatrix(matrixB);
+
+if (MltpExist(matrixA, matrixB))
+{
+    int[,] mltpAB = MultiplicationMatrixes(matrixA, matrixB);
+    PrintMatrix(mltpAB);
+}
+else Console.WriteLine("Muliplication doesn't exist");
