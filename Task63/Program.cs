@@ -6,12 +6,12 @@
 Console.WriteLine("Введите натуральное число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-NaturalNummbers(number);
-void NaturalNummbers(int num) //5
+NaturalNumbers(number);
+void NaturalNumbers(int num) //5
 
 {
     if (num == 0) return;
-    NaturalNummbers(num - 1);
+    NaturalNumbers(num - 1);
     Console.Write($"{num} ");
 
 }
