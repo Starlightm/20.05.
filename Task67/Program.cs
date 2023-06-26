@@ -13,6 +13,9 @@ int EnterNumber(string message)
 int SumDigits(int num)
 {
     if (num == 0) return 0;
+
+//                      сначала сохраняет в стеке числа 453 45 4 и затем складываем
+//                         остаток от деления этих цифр (4 45 453) на 10
     return num % 10 + SumDigits(num / 10);
 }
 
